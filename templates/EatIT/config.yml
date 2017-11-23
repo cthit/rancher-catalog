@@ -1,0 +1,7 @@
+name: EatIT
+description: |
+  A system for organizing food orders
+projectURL: https://github.com/cthit/EatIT
+maintainer: "digIT <digit@chalmers.it>"
+category: Tools
+version: 0.0.1

@@ -1,0 +1,19 @@
+version: '2'
+services:
+  app:
+    image: cthit/eatit
+    environment:
+      MONGO_URL: mongodb://db:27017
+      ROOT_URL: https://eatit.chalmers.it
+    stdin_open: true
+    tty: true
+    links:
+    - database:db
+    labels:
+      io.rancher.container.pull_image: always
+  database:
+    image: mongo
+    stdin_open: true
+    tty: true
+    labels:
+      io.rancher.container.pull_image: always

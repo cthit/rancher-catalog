@@ -1,0 +1,13 @@
+version: '2'
+catalog:
+  name: "EatIT"
+  version: "0.0.1"
+  description: "A system for organizing food orders"
+  minimum_rancher_version: v0.46.0
+services:
+  app:
+    scale: 1
+    start_on_create: true
+  database:
+    scale: 1
+    start_on_create: true
