@@ -1,0 +1,7 @@
+name: Printerscript
+description: |
+  MicroService for remote printing from chalmers.it
+projectURL: https://github.com/cthit/chalmersit-print
+maintainer: "digIT <digit@chalmers.it>"
+category: MicroService
+version: 0.0.1
