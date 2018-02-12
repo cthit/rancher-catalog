@@ -1,0 +1,10 @@
+version: '2'
+catalog:
+  name: "Sannes"
+  version: "0.0.1"
+  description: "Interactive food menu for sannegården"
+  minimum_rancher_version: v0.46.0
+services:
+  app:
+    scale: 1
+    start_on_create: true
