@@ -1,0 +1,34 @@
+version: '2'
+services:
+  proxy:
+    image: rancher/lb-service-haproxy:v0.7.15
+    expose:
+    - 80:80/tcp
+    labels:
+      io.rancher.container.agent.role: environmentAdmin,agent
+      io.rancher.container.agent_service.drain_provider: 'true'
+      io.rancher.container.create_agent: 'true'
+  database:
+    image: mariadb
+    environment:
+      MYSQL_ROOT_PASSWORD: YourAwesomePassword
+    stdin_open: true
+    volumes:
+    - /data/chalmersit-print/database:/var/lib/mysql
+    tty: true
+    labels:
+      io.rancher.container.pull_image: always
+  printerscript:
+    image: cthit/chalmersit-print:stable
+    environment:
+      DATABASE_NAME: chalmersit_print_production
+      DATABASE_HOST: db
+      DATABASE_USER: root
+      DATABASE_PASSWORD: YourAwesomePassword
+    stdin_open: true
+    tty: true
+    links:
+    - database:db
+    labels:
+      io.rancher.container.pull_image: always
+
