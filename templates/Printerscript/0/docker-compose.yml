@@ -19,7 +19,7 @@ services:
     labels:
       io.rancher.container.pull_image: always
   printerscript:
-    image: cthit/chalmersit-print:test
+    image: cthit/chalmersit-print:stable
     environment:
       DATABASE_NAME: chalmersit_print_production
       DATABASE_HOST: db
