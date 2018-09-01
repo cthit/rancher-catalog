@@ -1,0 +1,27 @@
+version: '2'
+services:
+  gotify:
+    image: cthit/gotify
+    environment:
+      GOTIFY_PORT: '8080'
+      GOTIFY_PRE-SHARED-KEY: SecretShareKey
+      GOTIFY_DEBUG-MODE: 'false'
+      GOTIFY_GOOGLE-MAIL.KEYFILE: gapps.json
+      GOTIFY_GOOGLE-MAIL.ADMIN-MAIL: admin@chalmers.it
+    stdin_open: true
+    volumes:
+    - /data/gotify/gapps.json:/app/gapps.json
+    tty: true
+    labels:
+      io.rancher.container.pull_image: always
+  gotify-mock:
+    image: cthit/gotify
+    environment:
+      GOTIFY_PORT: '8080'
+      GOTIFY_PRE-SHARED-KEY: 123abc
+      GOTIFY_DEBUG-MODE: 'false'
+      GOTIFY_MOCK-MODE: 'true'
+    stdin_open: true
+    tty: true
+    labels:
+      io.rancher.container.pull_image: always

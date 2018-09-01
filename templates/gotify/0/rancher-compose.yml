@@ -1,0 +1,13 @@
+version: '2'
+catalog:
+  name: "gotify"
+  version: "0.0.1"
+  description: "Service for sending notifications"
+  minimum_rancher_version: v0.46.0
+services:
+  gotify:
+    scale: 1
+    start_on_create: true
+  gotify-mock:
+    scale: 1
+    start_on_create: true
