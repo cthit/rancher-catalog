@@ -4,7 +4,7 @@ services:
     image: cthit/gotify
     environment:
       GOTIFY_PORT: '8080'
-      GOTIFY_PRE-SHARED-KEY: SecretShareKey
+      GOTIFY_PRE-SHARED-KEY: ${PRE_SHARED_KEY}
       GOTIFY_DEBUG-MODE: 'false'
       GOTIFY_GOOGLE-MAIL.KEYFILE: gapps.json
       GOTIFY_GOOGLE-MAIL.ADMIN-MAIL: admin@chalmers.it

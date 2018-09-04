@@ -4,6 +4,11 @@ catalog:
   version: "0.0.1"
   description: "Service for sending notifications"
   minimum_rancher_version: v0.46.0
+  questions:
+    - variable: "PRE_SHARED_KEY"
+      label: "Pre shared key for api access"
+      description: "This key must be shared with clients for api uasge"
+      required: true
 services:
   gotify:
     scale: 1
