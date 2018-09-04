@@ -9,6 +9,7 @@ catalog:
       label: "Pre shared key for api access"
       description: "This key must be shared with clients for api uasge"
       required: true
+      type: "string"
 services:
   gotify:
     scale: 1
