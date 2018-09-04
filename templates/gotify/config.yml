@@ -1,0 +1,7 @@
+name: gotify
+description: |
+  Service for sending notifications
+projectURL: https://github.com/cthit/gotify
+maintainer: "digIT <digit@chalmers.it>"
+category: Infrastructure Services
+version: 0.0.1
